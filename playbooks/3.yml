@@ -1,0 +1,18 @@
+---
+ - hosts : ubuntu
+   tasks :
+   - name : install apache2
+     apt :
+      name : apache2
+      state : present
+   - name : running service
+     service :
+      name : apache2
+      state : started
+   - name : deploying apache
+     copy :
+      src : /home/ansible/index.html
+      dest : /var/www/html
+
+
+

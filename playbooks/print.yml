@@ -1,0 +1,6 @@
+---
+ - hosts : ubuntu
+   tasks :
+   - name : printing msgs
+     debug :
+       msg : hello  

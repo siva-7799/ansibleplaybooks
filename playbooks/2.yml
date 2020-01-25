@@ -1,0 +1,11 @@
+---
+ - hosts : ubuntu
+   tasks :
+   - name : file creation
+     file :
+      path : /home/ansible/siva.html
+      state : touch
+   - name : directory creation
+     file :
+      path : /home/ansible/gnsk
+      state : directory

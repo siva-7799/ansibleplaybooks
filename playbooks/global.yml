@@ -1,0 +1,17 @@
+- name : demo for vars from play
+  hosts : ubuntu
+  vars : 
+    URL : play.google.com
+    location:
+       - hyderabd
+       - banglore
+    credentials:
+        raju: raju123
+        ramu: ramu123
+   tasks:
+     - name : Access and print
+       debug :
+          msg : URL = {{URL}}
+     - name : Access list variable
+       debug :
+           msg : Location = {{location[0]}}
